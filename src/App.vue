@@ -67,7 +67,8 @@ import { ref } from 'vue';
         tasks.value.forEach((el, index) => {
           text += `\n{`
           for(const key in el) {
-            text += `"${key}":"${el[key]}"`
+            text += `"${key}":\`${el[key]}\``
+            
             if(key !== 'time_limit') {
               text += `,\n`
             }
